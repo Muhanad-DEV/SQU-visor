@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refined Chatbot UI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="main-container">
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="chat-ai">SQU-visor</h2>
+                <button class="new-chat-btn">New Chat</button>
+                <input type="text" class="search-input" placeholder="Search..." />
+            </div>
+
+            <!-- Chat History -->
+            <ul id="chat-history" class="chat-history">
+                <li class="chat-item selected">
+                    <img src="Frame.svg" class="chat-icon" alt="Chat Icon" />
+                    Who teaches Python 2 this sem
+                </li>
+                <li class="chat-item">
+                    <img src="Frame.svg" class="chat-icon" alt="Chat Icon" />
+                    Apply To Leave For Emergency
+                </li>
+                <li class="chat-item">
+                    <img src="Frame.svg" class="chat-icon" alt="Chat Icon" />
+                    What Is UI UX Design?
+                </li>
+                <li class="chat-item">
+                    <img src="Frame.svg" class="chat-icon" alt="Chat Icon" />
+                    Create POS System
+                </li>
+                <li class="chat-item">
+                    <img src="Frame.svg" class="chat-icon" alt="Chat Icon" />
+                    What Is UX Audit?
+                </li>
+            </ul>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+
+                <button class="settings-btn" style="font-size: x-large;">Settings</button>
+
+                <button class="user-profile">
+                    <img src="omori.png" alt="User Avatar" class="avatar">
+                    <span style="font-size: large; font: bold;">Omori</span>
+                </button>
+
+            </div>
+        </aside>
+
+        <!-- Main Chat Section -->
+        <main class="chat-main">
+            <div id="chat-box" class="chat-box">
+                <div class="chat-message user">
+                    <span class="timestamp">You 04:30 PM</span>
+                    <div class="message-bubble">Do androids truly dream of electric sheep?</div>
+                </div>
+                <div class="chat-message bot">
+                    <span class="timesBot">ASK.SQU 04:30 PM</span>
+                    <div class="message-bubble">This is a response to: Do androids truly dream of electric sheep?</div>
+                </div>
+            </div>
+
+            <!-- Chat Input Section -->
+            <div class="chat-input-container">
+                <div class="chat-input">
+                    
+                    <div class="icon attach-icon" onclick="document.getElementById('file-input').click();">
+                        <img src="attach.svg" alt="Attach" />
+                    </div>
+                    <input type="file" id="file-input" style="display: none;" />
+                    <textarea id="user-input" class="text-input" placeholder="Ask me anything..."></textarea>
+
+                    <div class="btn-group">
+                        <button class="btn left" type="button">Student</button>
+                        <button class="btn right" type="button">Employee</button>
+                    </div>
+
+                    <div class="icon mic-icon">
+                        <img src="Mic.svg" alt="Mic" />
+                    </div>
+                    <div class="icon send-icon" onclick="sendMessage()">
+                        <img src="arrowup.svg" alt="Send" />
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
